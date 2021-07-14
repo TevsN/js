@@ -1,18 +1,30 @@
-const numer = function(number1, number2) {
-    if (number1 > number2) {
-        return number1;
-    }
+const number1 = +prompt('number 1')
+const number2 = +prompt('number 2')
+const calc = prompt('Enter operator')
 
-    if (number1 < number2) {
-        return number2
+switch(calc) {
+    case '+': {
+        const result = number1 + number2;
+        alert(result);
+        break;
     }
-
-    if (number1 = number2) {
-        return ('поровну')
+    case '-': {
+        const result = number1 - number2;
+        alert(result);
+        break;
     }
-
-    
+    case '*': {
+        const result = number1 * number2;
+        alert(result);
+        break;
+    }
+    case '/': {
+        const result = number1 / number2;
+        alert(result);
+        break;
+    }
+    default: {
+        alert('Unknow operator');
+    }
 }
 
-const result = numer(12,12);
-console.log(result)
